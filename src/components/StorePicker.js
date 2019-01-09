@@ -9,7 +9,10 @@ class StorePicker extends Component{
         e.preventDefault();
 
         // 2. get the text from the input
-        console.log(this.myInput);
+        const store = this.myInput.value.value
+
+        // 3. change the page w/o refreshing
+        this.props.history.push(`/store/${store}`);
     }
     render() {
         return (
